@@ -185,3 +185,6 @@ function! Replace()
   let new = input("Replace with: ")
   execute '%s/' . escape(old, '/\') . '/' . escape(new, '/\') . '/g'
 endfunction
+
+"Use syntax highlighting for tpp files"                                         
+autocmd BufRead,BufNewFile *.tpp set filetype=cpp
